@@ -26,10 +26,14 @@ this section will have all the data augmentation, etc etc stuff. basically, what
 ### Modeling
 describing the CNN model and the layers of convolution
 
+![Google Colab CNN Model](http://personal.ie.cuhk.edu.hk/~ccloy/project_target_code/images/fig3.png)
+
 ### Error Analysis
 plots, metrics for success, etc.
 
-![Training vs Test Plot](images/blood_trainvtestloss.JPG)
+![Training vs Validation Loss](images/blood_trainvtestloss.JPG)
+
+![Confusion Matrix](images/blood_confmatrix.JPG)
 
 ## Summary
 This will be updated after project completion.
