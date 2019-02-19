@@ -41,7 +41,7 @@ This will be updated after project completion.
 When building a model to recognize complex shapes, a proportionately large dataset must be used to train the model. One of our main obstacles is the relatively small size of our dataset. This can be overcome by increasing the size of the dataset through data augmentation. In application, images of blood from patients may show white blood cells in inconsistent orientations, locations, image scale, etc. By augmenting our original dataset, we can simulate these conditions and allow our CNN model to robustly recognize cell types. Some image augmentations that we are trying are: rotations, color-shifting, mirroring, X- and Y-skew. 
 The "dataset2-master" set includes rotated images, but the proportions for the classes of blood cells are normalized. We want to train our model while keeping the proportions of classes consistent with the original and augmented image data. 
 
-The training dataset needs to be split into training and validation sets. 
+The training dataset needs to be split into training and validation sets, since we are creating new augmented images to use for our model.
 
 We need to test different models and produce graphs for the following:
   + dropout vs no dropout
