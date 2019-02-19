@@ -3,10 +3,16 @@
 ## Goal (delete this section later)
 Detect and classify white blood cell subtypes from images of patient blood samples. 
 
+### Contributors
++ Ludvig Killingsberg
++ Maya Samet
++ Shakuntala Mitra
++ Zahra Afzal
+
 ## Background and Purpose
 + add pretty pictures and graphs <3
 
-  Blood tests are commonly used in hospitals by medical professionals to aid them in their diagnoses of patients’ conditions. One of the most common tests is a CBC panel, or Complete Blood Count, which measures the percentages of various kinds of blood cells in a sample of patient’s blood. A CBC panel includes a WBC (white blood cell) count, which measures the amounts of different white blood cells, such as lymphocytes, monocytes, neutrophils, basophils, and eosinophils. Normal, healthy human bodies have a typical range of each kind of white blood cell present in the blood. Too high or too low white blood cell counts can indicate an infection, immune system problems, or even cancer. 
+  Blood tests are commonly used in hospitals by medical professionals to aid them in their diagnosis of patients’ conditions. One of the most common tests is a CBC panel, or Complete Blood Count, which measures the percentage of various kinds of blood cells in a sample of patient’s blood. A CBC panel includes a WBC (white blood cell) count, which measures the amount of different white blood cells, such as lymphocytes, monocytes, neutrophils, basophils, and eosinophils. Normal, healthy human bodies have a typical range of each kind of white blood cell present in the blood. Too high or too low white blood cell counts can indicate an infection, immune system problems, or even cancer. 
 
   Hospital labs can take hours, or even days, to process just one patient sample, and the processing time and error only grows with each additional sample and type of blood chemistry requested by the physician. Hemocytometers, which are manual devices used to count cells, are time-consuming to use and incur additional error due to human fallibility. By training an image recognition program to identify and quantify different white blood cell types in patient blood samples, we will be hugely expediting the processing of patient blood samples, improving the accuracy of diagnostic blood test results, and laying a basis for a future predictive program that can potentially interpret and diagnose patients’ conditions. 
   
