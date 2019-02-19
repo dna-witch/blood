@@ -29,7 +29,7 @@ describing the CNN model and the layers of convolution
 ### Error Analysis
 plots, metrics for success, etc.
 
-![Training vs Test Plot](images/blood_trainvtestloss.jpg)
+![Training vs Test Plot](images/blood_trainvtestloss.JPG)
 
 ## Summary
 This will be updated after project completion.
