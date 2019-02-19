@@ -44,6 +44,7 @@ These plots show that our model starts overfitting fairly quickly, as loss start
 ![Training vs Validation Loss](images/blood_trainvtestloss.JPG)
 
 This confusion matrix clearly shows that our model is least accurate in its predictions for 0s (neutrophils) and 1s (eosinophils) that appear in the validation set. Neutrophils are often miscategorized as eosinophils, and vice versa. 2s (monocytes) are also sometimes predicted where the validation set shows neutrophils or eosinophils.
+
 ![Confusion Matrix](images/blood_confmatrix.JPG)
 
 ## Summary
