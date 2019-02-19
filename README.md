@@ -21,15 +21,23 @@ This Kaggle dataset contains 12,500 augmented images of blood cells (JPEG) with 
 ## Methods
 ### Preprocessing
 These are some examples of images from the dataset we were working with during this first iteration of our model, alongside some rotated and mirrored images. The cells have been manually stained and photographed, such that the nuclei of the white blood cells have turned pink. The erythrocytes, or red blood cells, in the input images can be differentiated from the white blood cells by their lack of nuclei, which leaves them colorless due to the staining technique. When building a model to recognize complex shapes, a proportionately large dataset must be used to train the model. In order to increase the amount of relevant images in the dataset, as well as increase the robustness of the model's recognition, the images can be augmented (rotated, mirrored, translated).
+
 ![Examples of Input Images](images/blood_ex.JPG)
 
 Here is a diagram showing the morphological differences between the different classes of white blood cells.
+
 ![Classes of WBCs](http://eclinpath.com/wp-content/uploads/EQ-COMP.jpg)
 
+Below is a plot showing counts of the rotated images and the original images from the dataset. The manipulated images are duplicated so that there are 600 images of each type of white blood cell, normalizing the amount of images for each class of white blood cell. This standardization can be helpful by making sure the model doesn't skew by preferring accuracy in prediction of common categories over uncommon categories (when tasked with predicting a rare event, the easiest thing for a model to do to get high overall accuracy is to just predict that it never happens). 
+
+![Image Ratios](images/blood_imageratios.JPG)
+
 ### Modeling
-describing the CNN model and the layers of convolution
+We used a basic convolutional neural network model to create our image classifier.
 
 ![Google Colab CNN Model](http://personal.ie.cuhk.edu.hk/~ccloy/project_target_code/images/fig3.png)
+
+sdf
 
 ### Error Analysis
 These plots show that our model starts overfitting fairly quickly, as loss starts increasing roughly following the 5th epoch, where we also reach our peak accuracy. 
