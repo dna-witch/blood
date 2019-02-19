@@ -23,6 +23,13 @@ This Kaggle dataset contains 12,500 augmented images of blood cells (JPEG) with 
 ### Preprocessing
 this section will have all the data augmentation, etc etc stuff. basically, what did we do to the original dataset(s) to get them ready for the running the model
 
+These are some examples of images from our datasets alongside some rotated images. The images contain some red blood cells, which can be differentiated from the white blood cells by their lack of nuclei. When building a model to recognize complex shapes, a proportionately large dataset must be used to train the model. 
+![Examples of Input Images](images/blood_ex.JPG)
+
+Here is a diagram showing the morphological differences between the different classes of white blood cells.
+![Classes of WBCs](https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjoq_zTjMfgAhULDq0KHekyCrcQjRx6BAgBEAU&url=https%3A%2F%2Fstudy.com%2Facademy%2Flesson%2Fdo-white-blood-cells-have-a-nucleus.html&psig=AOvVaw1OO7HUAbChH54FmzCcyUgF&ust=1550641598208733)
+
+
 ### Modeling
 describing the CNN model and the layers of convolution
 
@@ -42,7 +49,7 @@ This will be updated after project completion.
 This will be updated after project completion.
 
 ## Future Work
-When building a model to recognize complex shapes, a proportionately large dataset must be used to train the model. One of our main obstacles is the relatively small size of our dataset. This can be overcome by increasing the size of the dataset through data augmentation. In application, images of blood from patients may show white blood cells in inconsistent orientations, locations, image scale, etc. By augmenting our original dataset, we can simulate these conditions and allow our CNN model to robustly recognize cell types. Some image augmentations that we are trying are: rotations, color-shifting, mirroring, X- and Y-skew. 
+One of our main obstacles is the relatively small size of our dataset. This can be overcome by increasing the size of the dataset through data augmentation. In application, images of blood from patients may show white blood cells in inconsistent orientations, locations, image scale, etc. By augmenting our original dataset, we can simulate these conditions and allow our CNN model to robustly recognize cell types. Some image augmentations that we are trying are: rotations, color-shifting, mirroring, X- and Y-skew. 
 The "dataset2-master" set includes rotated images, but the proportions for the classes of blood cells are normalized. We want to train our model while keeping the proportions of classes consistent with the original and augmented image data. 
 
 The training dataset needs to be split into training and validation sets, since we are creating new augmented images to use for our model.
