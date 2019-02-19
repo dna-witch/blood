@@ -2,9 +2,9 @@
 
 ## Goal
 Detect and classify white blood cell subtypes from images of patient blood samples. 
- ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8vEQ4sYF2lpb8Itc4qKCGEQX6cVbZGd1maI3QuB9EuEVVzqgR)
+ ![Example of our goal](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8vEQ4sYF2lpb8Itc4qKCGEQX6cVbZGd1maI3QuB9EuEVVzqgR)
 
-### Contributors
+## Contributors
 + Ludvig Killingsberg
 + Maya Samet
 + Shakuntala Mitra
@@ -19,9 +19,8 @@ Detect and classify white blood cell subtypes from images of patient blood sampl
 This Kaggle dataset contains 12,500 augmented images of blood cells (JPEG) with accompanying cell type labels (CSV). There are approximately 3,000 images for each of 4 different cell types grouped into 4 different folders (according to cell type). The cell types are Eosinophil, Lymphocyte, Monocyte, and Neutrophil. This dataset is accompanied by an additional dataset containing the original 410 images (pre-augmentation) as well as two additional subtype labels (WBC vs WBC) and also bounding boxes for each cell in each of these 410 images (JPEG + XML metadata). More specifically, the folder 'dataset-master' contains 410 images of blood cells with subtype labels and bounding boxes (JPEG + XML), while the folder 'dataset2-master' contains 2,500 augmented images as well as 4 additional subtype labels (JPEG + CSV). There are approximately 3,000 augmented images for each class of the 4 classes as compared to 88, 33, 21, and 207 images of each in folder 'dataset-master'.
 
 ## Methods
-
 ### Preprocessing
-These are some examples of images from our datasets alongside some rotated images. The cells have been manually stained and photographed, such that the nuclei of the white blood cells have turned pink. The erythrocytes, or red blood cells, in the input images can be differentiated from the white blood cells by their lack of nuclei, which leaves them colorless due to the staining technique. When building a model to recognize complex shapes, a proportionately large dataset must be used to train the model. 
+These are some examples of images from the dataset we were working with during this first iteration of our model, alongside some rotated and mirrored images. The cells have been manually stained and photographed, such that the nuclei of the white blood cells have turned pink. The erythrocytes, or red blood cells, in the input images can be differentiated from the white blood cells by their lack of nuclei, which leaves them colorless due to the staining technique. When building a model to recognize complex shapes, a proportionately large dataset must be used to train the model. In order to increase the amount of relevant images in the dataset, as well as increase the robustness of the model's recognition, the images can be augmented (rotated, mirrored, translated).
 ![Examples of Input Images](images/blood_ex.JPG)
 
 Here is a diagram showing the morphological differences between the different classes of white blood cells.
@@ -33,10 +32,10 @@ describing the CNN model and the layers of convolution
 ![Google Colab CNN Model](http://personal.ie.cuhk.edu.hk/~ccloy/project_target_code/images/fig3.png)
 
 ### Error Analysis
-plots, metrics for success, etc.
-
+These plots show that our model starts overfitting fairly quickly, as loss starts increasing roughly following the 5th epoch, where we also reach our peak accuracy. 
 ![Training vs Validation Loss](images/blood_trainvtestloss.JPG)
 
+This confusion matrix clearly shows that our model is least accurate in its predictions for 0s (neutrophils) and 1s (eosinophils) that appear in the validation set. Neutrophils are often miscategorized as eosinophils, and vice versa. 2s (monocytes) are also sometimes predicted where the validation set shows neutrophils or eosinophils.
 ![Confusion Matrix](images/blood_confmatrix.JPG)
 
 ## Summary
@@ -57,3 +56,5 @@ We need to test different models and produce graphs for the following:
   + different numbers of layers (more convolution)
   + batch normalization vs no normalization
   + different activation function 
+  
+Another potential features to add to our existing model: object detection by creating bounding boxes for the white blood cells, Light-Head R-CNN (two stage object detection algorithm)
