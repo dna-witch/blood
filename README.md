@@ -34,6 +34,7 @@ Below is a plot showing counts of the rotated images and the original images fro
 
 ### Modeling
 We used a basic convolutional neural network model to create our image classifier.
+Additionally we will be using Light-Head R-CNN ,a two stage object detection algorithm, to create bounding boxes for the white blood cells.  
 
 ![Google Colab CNN Model](http://personal.ie.cuhk.edu.hk/~ccloy/project_target_code/images/fig3.png)
 
@@ -66,4 +67,4 @@ We need to test different models and produce graphs for the following:
   + batch normalization vs no normalization
   + different activation function 
   
-Another potential features to add to our existing model: object detection by creating bounding boxes for the white blood cells, Light-Head R-CNN (two stage object detection algorithm)
+
