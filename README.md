@@ -37,7 +37,7 @@ We used a basic convolutional neural network model to create our image classifie
 
 ![Google Colab CNN Model](http://personal.ie.cuhk.edu.hk/~ccloy/project_target_code/images/fig3.png)
 
-Each convolutional layer attempts to identify features or shapes. Then, max pooling is done to find the most important vectors for those features. This two step process is repeated to be able to extract increasingly intricate or complex shapes from the input images. After the feature extraction is done from the training set images, the model is able to classify the white blood cells in the validation set.
+Each convolutional layer attempts to identify features or shapes. This process is repeated to be able to extract increasingly intricate or complex shapes from the input images. After the feature extraction is done from the training set images, the model is able to classify the white blood cells in the validation set.
 
 ### Error Analysis
 These plots show that our model starts overfitting fairly quickly, as loss starts increasing roughly following the 5th epoch, where we also reach our peak accuracy. 
