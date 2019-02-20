@@ -67,4 +67,5 @@ We need to test different models and produce graphs for the following:
   + batch normalization vs no normalization
   + different activation function 
   
+  Another potential features to add to our existing model: to use Light-Head R-CNN to create bounding box cells around the while blood cells using a two stage object detection algorithm.
 
