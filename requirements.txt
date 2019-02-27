@@ -1,0 +1,5 @@
+# instructions 
+install opencv-python
+install pillow
+install seaborn
+install scikit-image
